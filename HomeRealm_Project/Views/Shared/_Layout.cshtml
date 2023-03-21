@@ -18,16 +18,16 @@
 
     <link href="~/Content/CSS/searching.css" rel="stylesheet" />
 </head>
-<body>
+<body style="padding:0;">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin:0;">
         <!-- Container wrapper -->
         <div class="container">
             <!-- Navbar brand -->
-            <a class="navbar-brand me-2" href="#">
+            <a class="navbar-brand me-2" href="/">
                 <img src="~/images/logo-black.svg"
-                     height="30"
-                     width="30"
+                     height="50"
+                     width="50"
                      alt="MDB Logo"
                      loading="lazy"
                      style="margin-top: -1px;" />
@@ -58,14 +58,19 @@
                 <!-- Left links -->
 
                 <div class="d-flex align-items-center">
-                    <button type="button" class="btn btn-link px-3 me-2">
-                        Login
-                    </button>
-                    <button type="button" class="btn btn-primary me-3">
-                        Sign up for free
-                    </button>
-
-                </div>
+                    @using (Html.BeginForm("", "login", FormMethod.Post))
+                    {
+                        <button type="submit" class="btn btn-link px-3 me-2">
+                            Login
+                        </button>
+                    }
+                        @using (Html.BeginForm("", "signup", FormMethod.Post))
+                        {
+                            <button type="submit" class="btn btn-primary me-3">
+                                Sign up for free
+                            </button>
+                        }
+                    </div>
             </div>
             <!-- Collapsible wrapper -->
         </div>
@@ -143,8 +148,8 @@
             <!-- Grid container -->
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                © 2020 Copyright:
-                <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                © 2023 Copyright:kherbache + Oussi = BB
+                
             </div>
             <!-- Copyright -->
         </footer>
