@@ -2,31 +2,150 @@
     ViewBag.Title = "Home Page";
 
 }
+<h2 class="title"><span>Live there.</span> Book unique homes <br>and experience a city like a local.</h2>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+@Html.Partial("searching")
+<section class="gallery">
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    <div class="prices">
+
+        <h3>Explore Airbnb picks</h3>
+
+        <div class="img">
+            <img src="https://a2.muscache.com/im/pictures/6152848/b04eddeb_original.jpg?aki_policy=x_medium">
+            <div class="price-stamp">R$ 158</div>
+            <div class="description">
+                <h4>Loft Studio in the Central Area</h4>
+            </div>
+        </div>
+
+        <div class="img">
+            <img src="https://a2.muscache.com/im/pictures/34792065/bae84a3f_original.jpg?aki_policy=x_medium">
+            <div class="price-stamp">R$ 1399</div>
+            <div class="description">
+                <h4>Everview Suite</h4>
+            </div>
+        </div>
+
+        <div class="img">
+            <img src="https://a2.muscache.com/im/pictures/1faf9a4c-f839-44da-bd37-65ddc928379e.jpg?aki_policy=x_medium">
+            <div class="price-stamp">R$ 576</div>
+            <div class="description">
+                <h4>180° View, private pool villa</h4>
+            </div>
+        </div>
+
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+
+    <hr>
+
+
+    <div class="gallery-places">
+
+        <h3>Explore the world</h3>
+
+        <ul class="places">
+
+            <li class="img-large">
+                <img src="https://a0.muscache.com/airbnb/static/destinations/o-Paris_480x320.jpg">
+                <h4 class="place-names">Paris</h4>
+            </li>
+
+
+            <li class="img-short">
+                <img src="https://a0.muscache.com/airbnb/static/destinations/o-Rome_Piazza017_480x320.jpg">
+                <h4 class="place-names">Rome</h4>
+            </li>
+
+
+            <li class="img-short">
+                <img src="https://a0.muscache.com/airbnb/static/destinations/o-Los_Angeles_480x320.jpg">
+                <h4 class="place-names">Los Angeles</h4>
+            </li>
+
+
+            <li class="img-short">
+                <img src="https://a0.muscache.com/airbnb/static/destinations/o-Lisbon_480x320.jpg">
+                <h4 class="place-names">Lisbon</h4>
+            </li>
+
+
+            <li class="img-short">
+                <img src="https://a0.muscache.com/airbnb/static/destinations/o-Kyoto_480x320.jpg">
+                <h4 class="place-names">Tokyo</h4>
+            </li>
+
+
+            <li class="img-short">
+                <img src="https://a0.muscache.com/airbnb/static/destinations/o-London_480x320.jpg">
+                <h4 class="place-names">London</h4>
+            </li>
+
+
+            <li class="img-large">
+                <img src="https://a0.muscache.com/airbnb/static/destinations/o-New_York_480x320.jpg">
+                <h4 class="place-names">New York</h4>
+            </li>
+
+
+            <li class="img-short">
+                <img src="https://a0.muscache.com/airbnb/static/destinations/o-Barcelona_480x320.jpg">
+                <h4 class="place-names">Barcelona</h4>
+            </li>
+
+
+            <li class="img-short">
+                <img src="https://a0.muscache.com/airbnb/static/destinations/o-Amsterdam_480x320.jpg">
+                <h4 class="place-names">Amsterdam</h4>
+            </li>
+
+
+            <li class="img-short">
+                <img src="https://a0.muscache.com/airbnb/static/destinations/o-Berlin_480x320.jpg">
+                <h4 class="place-names">Berlin</h4>
+            </li>
+
+        </ul>
+
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+
+    <hr>
+
+
+    <div class="guidebooks">
+
+        <h3>Meet Guidebooks</h3>
+
+        <div class="img-box">
+            <img class="img-big" src="https://a2.muscache.com/ac/pictures/2a4e63c3-c981-4cbc-9c37-80a6ab3a9d24.jpg?interpolation=lanczos-none&size=x_medium&output-format=jpg&output-quality=70">
+            <img class="img-small" src="https://a0.muscache.com/airbnb/guidebook/v1_san_francisco_food_scene_carousel@2x.jpg">
+            <img class="img-small" src="https://a1.muscache.com/airbnb/guidebook/v1_san_francisco_drinks_nightlife_carousel@2x.jpg">
+
+            <h4><spam>San Francisco</spam></h4>
+            <p>6,237 places<p>
+        </div>
+
+
+        <div class="img-box">
+            <img class="img-big" src="https://a2.muscache.com/ac/pictures/cf3b9363-34e4-4532-b051-6a7663410854.jpg?interpolation=lanczos-none&size=x_medium&output-format=jpg&output-quality=70">
+            <img class="img-small" src="https://a1.muscache.com/airbnb/guidebook/v1_new_york_food_scene_carousel@2x.jpg">
+            <img class="img-small" src="https://a0.muscache.com/airbnb/guidebook/v1_new_york_drinks_nightlife_carousel@2x.jpg">
+
+            <h4>New York</h4>
+            <p>23,725</p>
+        </div>
+
+
+        <div class="img-box">
+            <img class="img-big" src="https://a2.muscache.com/ac/pictures/b62aa572-cf0b-4e4a-b886-a039a0250cf3.jpg?interpolation=lanczos-none&size=x_medium&output-format=jpg&output-quality=70">
+            <img class="img-small" src="https://a1.muscache.com/airbnb/guidebook/v1_london_food_scene_carousel@2x.jpg">
+            <img class="img-small" src="https://a2.muscache.com/airbnb/guidebook/v1_london_drinks_nightlife_carousel@2x.jpg">
+
+            <h4> London</h4>
+            <p>18,795 places</p>
+        </div>
+
+
     </div>
-</div>
+
+</section>

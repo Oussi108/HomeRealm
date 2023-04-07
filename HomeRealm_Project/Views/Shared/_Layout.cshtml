@@ -10,153 +10,134 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    
+
+    
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet" />
-
-    <link href="~/Content/CSS/searching.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <link href="~/Content/CSS/Main.css" rel="stylesheet" />
 </head>
-<body style="padding:0;">
+<body >
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin:0;">
-        <!-- Container wrapper -->
-        <div class="container">
-            <!-- Navbar brand -->
-            <a class="navbar-brand me-2" href="/">
-                <img src="~/images/logo-black.svg"
-                     height="50"
-                     width="50"
-                     alt="MDB Logo"
-                     loading="lazy"
-                     style="margin-top: -1px;" />
-            </a>
+    <header>
+
+        <h1 class="logo" >
+            
+        </h1>
+
+        <section class="search-bar">
+
+            <svg class="search-icon" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                <path d="M0 0h24v24H0z" fill="none" />
+            </svg>
+
+            <form class="search-form">
+                <input type="text" placeholder="Where to?">
+            </form>
+
+        </section>
 
 
-            <!-- Toggle button -->
-            <button class="navbar-toggler"
-                    type="button"
-                    data-mdb-toggle="collapse"
-                    data-mdb-target="#navbarButtonsExample"
-                    aria-controls="navbarButtonsExample"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
+        <ul class="main-nav">
+            <li> <button>Become a Host</button> </li>
+            <li class="help">Help</li>
+            <li><a href="@Url.Action("Index", "SignUp")">Sign Up</a></li>
+            <li><a href="@Url.Action("Index", "Login")">Login</a></li>
+        </ul>
 
-            <!-- Collapsible wrapper -->
-            <div class="collapse navbar-collapse" id="navbarButtonsExample">
-                <!-- Left links -->
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+    </header>
+    <main class="site-content">
 
 
-
-                    </li>
-                </ul>
-                <!-- Left links -->
-
-                <div class="d-flex align-items-center">
-                    @using (Html.BeginForm("", "login", FormMethod.Post))
-                    {
-                        <button type="submit" class="btn btn-link px-3 me-2">
-                            Login
-                        </button>
-                    }
-                        @using (Html.BeginForm("", "signup", FormMethod.Post))
-                        {
-                            <button type="submit" class="btn btn-primary me-3">
-                                Sign up for free
-                            </button>
-                        }
-                    </div>
-            </div>
-            <!-- Collapsible wrapper -->
-        </div>
-        <!-- Container wrapper -->
-    </nav>
-    <!-- Navbar -->
-
-    @if (Request.Url.LocalPath == "/" || Request.Url.LocalPath.StartsWith("/home"))
-    {
-        @Html.Partial("searching")
-
-    }
-    else
-    {
-    }
-
-
-    <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer class="bg-light text-center text-white">
-            <!-- Grid container -->
-            <div class="container p-4 pb-0">
-                <!-- Section: Social media -->
-                <section class="mb-4">
-                    <!-- Facebook -->
-                    <a class="btn text-white btn-floating m-1"
-                       style="background-color: #3b5998;"
-                       href="#!"
-                       role="button">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
 
-                    <!-- Twitter -->
-                    <a class="btn text-white btn-floating m-1"
-                       style="background-color: #55acee;"
-                       href="#!"
-                       role="button">
-                        <i class="fab fa-twitter"></i>
-                    </a>
 
-                    <!-- Google -->
-                    <a class="btn text-white btn-floating m-1"
-                       style="background-color: #dd4b39;"
-                       href="#!"
-                       role="button">
-                        <i class="fab fa-google"></i>
-                    </a>
 
-                    <!-- Instagram -->
-                    <a class="btn text-white btn-floating m-1"
-                       style="background-color: #ac2bac;"
-                       href="#!"
-                       role="button">
-                        <i class="fab fa-instagram"></i>
-                    </a>
 
-                    <!-- Linkedin -->
-                    <a class="btn text-white btn-floating m-1"
-                       style="background-color: #0082ca;"
-                       href="#!"
-                       role="button">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <!-- Github -->
-                    <a class="btn text-white btn-floating m-1"
-                       style="background-color: #333333;"
-                       href="#!"
-                       role="button">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </section>
-                <!-- Section: Social media -->
-            </div>
-            <!-- Grid container -->
-            <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                © 2023 Copyright:kherbache + Oussi = BB
-                
-            </div>
-            <!-- Copyright -->
-        </footer>
-    </div>
+
+
+
+    </main>
+    <footer class="bg-light text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn text-white btn-floating m-1"
+                   style="background-color: #3b5998;"
+                   href="https://www.facebook.com/houssin.oussi"
+                   role="button">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <!-- Twitter -->
+                <a class="btn text-white btn-floating m-1"
+                   style="background-color: #55acee;"
+                   href="#!"
+                   role="button">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <!-- Google -->
+                <a class="btn text-white btn-floating m-1"
+                   style="background-color: #dd4b39;"
+                   href="#!"
+                   role="button">
+                    <i class="fab fa-google"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a class="btn text-white btn-floating m-1"
+                   style="background-color: #ac2bac;"
+                   href="#!"
+                   role="button">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <!-- Linkedin -->
+                <a class="btn text-white btn-floating m-1"
+                   style="background-color: #0082ca;"
+                   href="#!"
+                   role="button">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <!-- Github -->
+                <a class="btn text-white btn-floating m-1"
+                   style="background-color: #333333;"
+                   href="#!"
+                   role="button">
+                    <i class="fab fa-github"></i>
+                </a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Copyright:kherbache + Oussi = BB
+
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+
+    
+
+
+
+

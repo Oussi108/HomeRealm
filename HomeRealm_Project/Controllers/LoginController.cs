@@ -13,5 +13,19 @@ namespace HomeRealm_Project.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult SubmitLogin(FormCollection  FC)
+        {
+            string pass = FC["Password"];
+            string email = FC["Email"];
+            
+            if (pass == "1")
+                Session["key"] = "Hello, world!";
+
+            else
+                Session["key"] = "Hello, world!";
+
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
