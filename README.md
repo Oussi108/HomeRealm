@@ -18,9 +18,6 @@ To use the website, you can create an account and log in. From there, you can se
 
 If you would like to contribute to this project, please submit a pull request. We welcome any improvements or bug fixes!
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
