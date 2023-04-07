@@ -191,6 +191,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="images\1407953244000-177513283 %281%29.png" />
+    <Content Include="images\homerealm-website-favicon-black.png" />
     <Content Include="images\homerealm-website-favicon-color.png" />
     <Content Include="images\homerealm.png" />
     <Content Include="images\logo-black.svg" />

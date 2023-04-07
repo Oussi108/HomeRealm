@@ -20,10 +20,10 @@ namespace HomeRealm_Project.Controllers
             string email = FC["Email"];
             
             if (pass == "1")
-                Session["key"] = "Hello, world!";
+                Session["log"] = "Hello, world!";
 
             else
-                Session["key"] = "Hello, world!";
+                Session["log"] = "Hello, world!";
 
             return RedirectToAction("Index", "Home");
         }
