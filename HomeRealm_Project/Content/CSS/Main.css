@@ -147,7 +147,7 @@ header {
     margin: 130px auto;
     width: 90%;
     height: 90%;
-    text-align :center;
+   text-align:left !important;
     font-family: Circular,Helvetica,Arial,sans-serif;
 }
 

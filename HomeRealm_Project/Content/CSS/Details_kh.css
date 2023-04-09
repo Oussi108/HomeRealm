@@ -1,0 +1,158 @@
+/* Global styles */
+* {
+	box-sizing: border-box;
+  }
+
+  
+  /* Header styles */
+
+  
+
+  
+  /* Main styles */
+  main {
+	padding: 40px 0;
+  }
+  
+  .house-details {
+	display: flex;
+	flex-wrap: wrap;
+  }
+  
+  .house-images {
+	width: 60%;
+	margin-right: 5%;
+	position: relative;
+  }
+  
+  .house-images img {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+  }
+  
+  .main-image {
+	height: 600px;
+	position: relative;
+  }
+  
+  .additional-images {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 20px;
+  }
+  
+  .additional-images img {
+	width: 30%;
+	margin-bottom: 20px;
+  }
+  
+  .house-info {
+	width: 35%;
+  }
+  
+  .house-title {
+	font-size: 2rem;
+	font-weight: 700;
+	margin: 0 0 10px;
+  }
+  
+  .house-rating {
+	display: flex;
+	align-items: center;
+	margin: 0 0 10px;
+  }
+  
+  .house-rating i {
+	color: #f7b731;
+	margin-right: 5px;
+  }
+  
+  .rating-count {
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin-left: 5px;
+  }
+  
+  .house-price {
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin: 0 0 20px;
+  }
+  
+  .house-location {
+	display: flex;
+	align-items: center;
+	margin: 0 0 20px;
+  }
+  
+  .house-location i {
+	color: #3498db;
+	margin-right: 5px;
+  }
+  
+  .location-text {
+	font-size: 1.2rem;
+	font-weight: 700;
+  }
+  
+  .house-features {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0 20px;
+  }
+  
+  .feature-item {
+	display: flex;
+	align-items: center;
+	margin-right: 20px;
+  }
+  
+  .feature-item i {
+	color: #f7b731;
+	margin-right: 5px;
+  }
+  
+  .feature-label {
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin-right: 5px;
+  }
+  
+  .house-description {
+	margin-bottom: 20px;
+  }
+  
+  .house-description p {
+	margin: 0;
+  }
+  
+  .house-amenities {
+	margin-bottom: 40px;
+  }
+  
+  .amenities-title {
+	font-size: 2rem;
+	font-weight: 700;
+	margin: 0 0 20px;
+  }
+  
+  .amenities-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .amenities-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+  }
+  
+  .amenities-item i {
+	color: #f7b731;
+	margin-right: 5px;
+  }
+  

@@ -24,21 +24,21 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
- 
+
 
     <!-- Popper.js library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
 
-    <!-- Bootstrap 5 library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap-reboot.min.css">
 
-
+    <script src="~/Scripts/js/Logout.js"></script>
     <link href="~/Content/CSS/Main.css" rel="stylesheet" />
+
 </head>
 <body>
     <!-- Navbar -->
-    <header>
+    <header style="z-index: 9999;">
 
 
         <div class="logo" style="width: 100px; height: px;">
@@ -62,16 +62,19 @@
 
         <ul class="main-nav">
             <li> <button>Become a Host</button> </li>
-            @if (Session["log"] != null)
+            @if (Session["iduser"] != null)
             {
                 <li>
-                    <a href="#">My profile</a>
+                    <a href="#">@Session["usermail"]</a>
                 </li>
                 <li>
-                    <a href="#">Settings</a>
+                    <a href="@Url.Action("Index", "Setting")">Settings</a>
                 </li>
                 <li>
-                    <a href="#">Logout</a>
+                    @using (Html.BeginForm("DeleteSession", "Home", FormMethod.Post))
+                    {
+                        <a href="javascript:{}" onclick="this.parentNode.submit(); return false;">Logout</a>
+                    }
                 </li>
 
             }
@@ -98,7 +101,7 @@
 
 
     </main>
-    
+
 
     <footer class="bg-light text-center text-white">
         <!-- Grid container -->
@@ -151,10 +154,10 @@
                    role="button">
                     <i class="fab fa-github"></i>
                 </a>
-               
-                </div>
-            </section>
-            <!-- Section: Social media -->
+
+        </div>
+        </section>
+        <!-- Section: Social media -->
         </div>
         <!-- Grid container -->
         <!-- Copyright -->
@@ -166,6 +169,9 @@
     </footer>
 
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="~/Scripts/popper.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     
 </body>

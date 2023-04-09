@@ -26,5 +26,10 @@ namespace HomeRealm_Project.Controllers
 
             return View();
         }
+        public ActionResult DeleteSession()
+        {
+            Session.Remove("iduser");
+            return RedirectToAction("Index");
+        }
     }
 }

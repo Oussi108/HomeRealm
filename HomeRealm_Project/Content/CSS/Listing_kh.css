@@ -1,0 +1,123 @@
+
+
+.listing {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .listing-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .listing-image img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+  .imgg img:not(:first-child) {
+    display: none;}
+  
+  .listing-image .prev,
+  .listing-image .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .listing-image .prev:hover,
+  .listing-image .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .listing-image .prev {
+    left: 0;
+  }
+  
+  .listing-image .next {
+    right: 0;
+  }
+  .listing-details {
+    padding: 20px;
+  }
+  
+  .listing-location {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+ 
+  .listing-rating {
+    display: flex;
+		margin-top: auto;
+  }
+  .listing-rating img{
+    width: 14px;
+    margin-right: 4px;}
+  
+  .checked {
+    color: orange;
+  }
+  
+  .listing-reviews {
+    font-size: 14px;
+    color: #888;
+    margin-left: 10px;
+  }
+  
+  .listing-description {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .listing-price {
+    font-size: 24px;
+    color: #f26522;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .li {
+    margin: 0;
+    padding: 0 0 0 1em; /* Add left padding to each list item */
+  }
+  .icon{
+    padding-right: 200%;
+    padding-left: 100%;
+  }
+  .icon img {
+    width: 20px;
+    height: 20px;
+  }
+  .icon_heart img {
+    width: 20px;
+    height: 20px;
+  }
+  .my-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+    
+    .my-button:hover {
+    background-color: #3e8e41;
+    }
+    

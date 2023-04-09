@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HomeRealm_Project.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,12 +19,16 @@ namespace HomeRealm_Project.Controllers
         {
             string pass = FC["Password"];
             string email = FC["Email"];
-            
-            if (pass == "1")
-                Session["log"] = "Hello, world!";
 
-            else
-                Session["log"] = "Hello, world!";
+            using (var db = new MydbContext()) {
+                var USER = db.Users.FirstOrDefault(user => user.Password == pass && user.Email == email);
+                if(USER != null)
+                {
+                    Session["iduser"] = USER.Id; 
+                    Session["usermail"] = USER.Email;
+                }
+            }
+                
 
             return RedirectToAction("Index", "Home");
         }
