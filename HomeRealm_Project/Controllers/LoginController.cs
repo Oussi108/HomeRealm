@@ -24,6 +24,7 @@ namespace HomeRealm_Project.Controllers
                 var USER = db.Users.FirstOrDefault(user => user.Password == pass && user.Email == email);
                 if(USER != null)
                 {
+                    Session["rule"] = "host";
                     Session["iduser"] = USER.Id; 
                     Session["usermail"] = USER.Email;
                 }

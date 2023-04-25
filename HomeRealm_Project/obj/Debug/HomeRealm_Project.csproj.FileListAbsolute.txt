@@ -97,5 +97,3 @@ C:\Users\acer\source\repos\HomeRealm_Project\HomeRealm_Project\bin\System.Memory
 C:\Users\acer\source\repos\HomeRealm_Project\HomeRealm_Project\bin\System.Numerics.Vectors.xml
 C:\Users\acer\source\repos\HomeRealm_Project\HomeRealm_Project\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\acer\source\repos\HomeRealm_Project\HomeRealm_Project\bin\System.Threading.Tasks.Extensions.xml
-C:\Users\acer\source\repos\HomeRealm_Project\HomeRealm_Project\obj\Debug\HomeRealm_Project.Migrations.Realm.resources
-C:\Users\acer\source\repos\HomeRealm_Project\HomeRealm_Project\obj\Debug\HomeRealm_Project.csproj.GenerateResource.cache

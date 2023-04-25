@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -33,7 +34,13 @@ namespace HomeRealm_Project.Models
             public string Password { get; set; }
 
 
-            [Required]
+        [Required]
+        [Column("Picture")]
+        
+        public string Picture { get; set; } = "Default_picture.jpg";
+
+
+        [Required]
             [MaxLength(20)]
             public string PhoneNumber { get; set; }
 

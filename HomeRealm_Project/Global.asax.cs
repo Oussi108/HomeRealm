@@ -38,7 +38,9 @@ namespace HomeRealm_Project
                         LastName = "admin",
                         Email ="admin@admin.com",
                         Password = "admin",
-                        PhoneNumber ="+212655555555"
+                        Picture = "Default_picture.jpg",
+                        PhoneNumber ="+212655555555",
+                        
 
                     };
 

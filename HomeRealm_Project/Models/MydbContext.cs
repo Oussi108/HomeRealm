@@ -89,7 +89,7 @@ namespace HomeRealm_Project.Models
         {
           
             AutomaticMigrationsEnabled = true;
-
+            AutomaticMigrationDataLossAllowed = true;
         }
     }
 }

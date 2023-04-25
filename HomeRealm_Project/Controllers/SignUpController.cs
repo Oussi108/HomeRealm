@@ -1,6 +1,7 @@
 ﻿using HomeRealm_Project.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -14,9 +15,41 @@ namespace HomeRealm_Project.Controllers
         {
             return View();
         }
-        public ActionResult UpgradeHost()
+        public ActionResult UpgradeToHost()
         {
             return View();
+        }
+        public ActionResult SubmitHostUpgrade(FormCollection FC)
+        {
+
+            HttpPostedFileBase file = Request.Files["IdPic"];
+
+            if (file != null && file.ContentLength > 0)
+            {
+                int id = (int)Session["iduser"];
+                // Do something with the uploaded file
+                string fileName = id+ "_" +Path.GetFileName(file.FileName);
+                string path = Path.Combine(Server.MapPath("~/images/idPics"), fileName);
+                file.SaveAs(path);
+                string bio = FC["Bio"];
+                
+                string country = FC["country"];
+                string pic = fileName;
+
+                string dateString = FC["birthday"];
+                DateTime date = DateTime.Parse(dateString);
+
+                using (var db = new MydbContext())
+                {
+                            var u = new Host {User = db.Users.FirstOrDefault(e => e.Id == 1),HostId = 1,Bio = bio,Country=country,IDPicture=pic,Birthday=date,Verified=false};
+                            db.Hosts.Add(u);
+                            db.SaveChanges();
+
+                }
+            }
+            
+            return RedirectToAction("Index", "Home");
+
         }
         public ActionResult SubmitSignUp(FormCollection FC)
         {
