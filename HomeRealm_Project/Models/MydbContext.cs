@@ -24,6 +24,7 @@ namespace HomeRealm_Project.Models
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<PropertyImage> PropertyImages { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

@@ -161,6 +161,7 @@
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ListingController.cs" />
+    <Compile Include="Controllers\ListingMangmentController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\SettingController.cs" />
     <Compile Include="Controllers\SignUpController.cs" />
@@ -172,6 +173,7 @@
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\MydbContext.cs" />
     <Compile Include="Models\Property.cs" />
+    <Compile Include="Models\PropertyImage.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -197,6 +199,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\CSS\Dashboard.css" />
     <Content Include="Content\CSS\Details_kh.css" />
+    <Content Include="Content\CSS\HostDashboard.css" />
     <Content Include="Content\CSS\Listing_kh.css" />
     <Content Include="Content\CSS\searching.css" />
     <Content Include="Content\CSS\Main.css" />
@@ -366,6 +369,11 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Shared\HeaderDashboard.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\ListingMangment\AddHouse.cshtml" />
+    <Content Include="Views\ListingMangment\Index.cshtml" />
+    <Content Include="Views\Shared\HostDashboard.cshtml" />
+    <Content Include="Views\Shared\Footer.cshtml" />
+    <Content Include="Views\ListingMangment\Addphotos.cshtml" />
     <None Include="Views\Shared\searching.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -389,6 +397,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="images\idPics\" />
     <Folder Include="images\ProfilePic\" />
+    <Folder Include="images\Properties\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
