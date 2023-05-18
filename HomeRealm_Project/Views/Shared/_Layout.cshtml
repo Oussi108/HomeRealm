@@ -41,7 +41,7 @@
 
 
         <div class="logo" style="width: 100px;">
-            <img src="~/images/homerealm-website-favicon-black.png" alt="logo" style="width: 100%; height: 100%;">
+         <a href="@Url.Action("index", "Home")">   <img src="~/images/homerealm-website-favicon-black.png" alt="logo" style="width: 100%; height: 100%;"> </a>
         </div>
 
 
@@ -60,7 +60,15 @@
 
 
         <ul class="main-nav">
-            <li> <button>Become a Host</button> </li>
+            @if (Session["rule"] == "user")
+            {
+                <li> <a href="@Url.Action("UpgradeToHost", "SignUp")"><button>Become a Host</button> </a></li>
+            }
+            else if (Session["rule"] == "host")
+            {
+                <li> <a href="@Url.Action("index", "ListingMangment")"><button>Host mangment</button> </a></li>
+            }
+            
             @if (Session["iduser"] != null)
             {
                 <li>

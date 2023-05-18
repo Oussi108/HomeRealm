@@ -1,4 +1,5 @@
-﻿
+﻿@using HomeRealm_Project.Models
+@model PropertiesViewModel
 @{
     ViewBag.Title = "Index";
 }
@@ -10,107 +11,41 @@
     -->
 
 </div>
+<link href="~/Content/CSS/CardsListing.css" rel="stylesheet" />
 <section class="gallery">
-    <ul style="text-align:left;">
-        <li>
-            <div class="listing" id="1">
-                <div class="listing-image">
+    <div class="container mt-100">
 
-                    <div class="imgg">
-
-                        <img src="~/images/pexels-pixabay-258154.jpg" alt="2">
-                        <img src="~/images/e71693b8-d054-4ca1-ae6b-87fd3d7085fe.jpg">
-                        <img src="~/images/628596eb-5f33-4d74-b6c3-20aff808a745.jpg">
-                        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-                        <button class="next" onclick="plusSlides(1)">&#10095;</button>
-                    </div>
-                </div>
-                <div class="listing-details">
-                    <a href="homev1.html"><h2>Beautiful Apartment in the Heart of the City</h2></a>
-                    <p class="listing-location">lile, France</p>
-                    <div class="listing-rating">
-                        <img src="~/images/Starred.svg.png" alt="stare">
-                        <img src="~/images/Starred.svg.png" alt="stare">
-                        <img src="~/images/Starred.svg.png" alt="stare">
-                        <img src="~/images/Starred.svg.png" alt="stare">
-                        <span class="listing-reviews">(379 Reviews)</span>
-                    </div>
-                    <p class="listing-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="listing-price">$850/night</div> <div class="icon_heart">
-                        <button onclick="heart()">
-                            <img src="~/images/heart.svg" alt="Heart">
-                        </button>
-                    </div>
-                </div>
-        </li>
-
-
-        <li>
-            <div class="listing" id="2">
-                <div class="listing-image">
-                    <div class="imgg">
-                        <img src="~/images/pexels-pixabay-258154.jpg" alt="2">
-                        <img src="~/images/e71693b8-d054-4ca1-ae6b-87fd3d7085fe.jpg">
-                        <img src="~/images/628596eb-5f33-4d74-b6c3-20aff808a745.jpg">
-                        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-                        <button class="next" onclick="plusSlides(1)">&#10095;</button>
-                    </div>
-                </div>
-                <div class="listing-details">
-                    <h2>Our charming home is nestled in a quiet neighborhood just minutes away from the bustling city center.</h2>
-                    <p class="listing-location">Paris, France</p>
-                    <div class="listing-rating">
-                        <img src="~/images/Starred.svg.png" alt="stare">
-                        <img src="~/images/Starred.svg.png" alt="stare">
-                        <img src="~/images/Starred.svg.png" alt="stare">
-                        <span class="listing-reviews">(300 Reviews)</span>
-                    </div>
-                    <p class="listing-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="listing-price">
-                        $150/night
-                        <div class="icon_heart">
-                            <button onclick="heart()">
-                                <img src="~/images/heart.svg" alt="Heart">
-                            </button>
+        <div class="container mt-5 mb-5">
+            <div class="d-flex justify-content-center row">
+                <div class="col-md-10">
+                    @foreach (var property in Model.Properties)
+                    {
+                       
+                        <div class="row p-2 bg-white border rounded">
+                            <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="~/images/@property.ImageUrl"></div>
+                            <div class="col-md-6 mt-1">
+                                <h5>Quant olap shirts</h5>
+                                <div class="d-flex flex-row">
+                                    <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+                                </div>
+                                <div class="mt-1 mb-1 spec-1"><span>@property.Country</span><span class="dot"></span><span>@property.City</span><span class="dot"></span><span>@property.Address<br></span></div>
+                                <div class="mt-1 mb-1 spec-1"><span>Updated in :@property.UpdatedAt.ToString()</span></div>
+                                <p class="text-justify text-truncate para mb-0">@property.Description.<br><br></p>
+                            </div>
+                            <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                                <div class="d-flex flex-row align-items-center">
+                                    <h4 class="mr-1">$@property.Price</h4>
+                                </div>
+                                <h6 class="text-success">Capacity : @property.Capacity Person</h6>
+                                <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Rent Now</button></div>
+                            </div>
                         </div>
-
-                    </div>
-                </div>
-        </li>
-        <li>
-            <div class="listing" id="3">
-                <div class="listing-image">
-                    <div class="imgg">
-
-                        <img src="~/images/pexels-pixabay-258154.jpg" alt="2">
-                        <img src="~/images/e71693b8-d054-4ca1-ae6b-87fd3d7085fe.jpg">
-                        <img src="~/images/628596eb-5f33-4d74-b6c3-20aff808a745.jpg">
-                        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-                        <button class="next" onclick="plusSlides(1)">&#10095;</button>
-                    </div>
-
-                </div>
-                <div class="listing-details">
-                    <h2>Our cozy abode is situated in a picturesque suburb with easy access to nearby parks and amenities.</h2>
-
-                    <p class="listing-location">saidia, Maroc</p>
-                    <div class="listing-rating">
-                        <img src="~/images/Starred.svg.png" alt="stare">
-                        <img src="~/images/Starred.svg.png" alt="stare">
-                        <img src="~/images/Starred.svg.png" alt="stare">
-                        <img src="~/images/Starred.svg.png" alt="stare">
-                        <span class="listing-reviews">(130 Reviews)</span>
-                    </div>
-                    <p class="listing-description">Our charming home is nestled in a quiet neighborhood just minutes away from the bustling city center.</p>
-                    <div class="listing-price">$1150/night</div>
-                    <div class="icon_heart">
-                        <button onclick="heart()">
-                            <img src="~/images/heart.svg" alt="Heart">
-                        </button>
-                    </div>
+                    }
                 </div>
             </div>
-        </li>
-    </ul>
+        </div>
+
+
+    </div>
 
 </section>

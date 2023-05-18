@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HomeRealm_Project.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,17 @@ namespace HomeRealm_Project.Controllers
         // GET: Listing
         public ActionResult Index()
         {
-            return View();
+            PropertiesViewModel viewModel;
+            using (var db = new MydbContext())
+            {
+                var properties = db.Properties.ToList(); // Retrieve properties from your data source
+
+                viewModel = new PropertiesViewModel
+                {
+                    Properties = properties
+                };
+            }
+            return View(viewModel);
         }
         public ActionResult Details()
         {   

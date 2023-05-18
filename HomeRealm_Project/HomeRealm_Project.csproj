@@ -169,6 +169,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Booking.cs" />
+    <Compile Include="Models\PropertiesViewModel.cs" />
     <Compile Include="Models\Host.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\MydbContext.cs" />
@@ -197,6 +198,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\CSS\CardsListing.css" />
     <Content Include="Content\CSS\Dashboard.css" />
     <Content Include="Content\CSS\Details_kh.css" />
     <Content Include="Content\CSS\HostDashboard.css" />
@@ -212,6 +214,7 @@
     <Content Include="images\1407953244000-177513283 %281%29.png" />
     <Content Include="images\628596eb-5f33-4d74-b6c3-20aff808a745.jpg" />
     <Content Include="images\Default_picture.jpg" />
+    <Content Include="images\Default_prop.png" />
     <Content Include="images\e71693b8-d054-4ca1-ae6b-87fd3d7085fe.jpg" />
     <Content Include="images\heart.svg" />
     <Content Include="images\homerealm-low-resolution-color-logo.png" />
@@ -221,6 +224,7 @@
     <Content Include="images\logo-black.svg" />
     <Content Include="images\logo-white.svg" />
     <Content Include="images\pexels-pixabay-258154.jpg" />
+    <Content Include="images\Properties\Default_prop.png" />
     <Content Include="images\Searchs_002.png" />
     <Content Include="images\Starred.svg.png" />
     <Content Include="images\TAL-hidden-haven-villa-south-africa-airbnb-NEWBNBCAT0123-0e3c6ef5dce0490aac7dd5cd92b27f33.jpg" />
@@ -397,7 +401,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="images\idPics\" />
     <Folder Include="images\ProfilePic\" />
-    <Folder Include="images\Properties\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
