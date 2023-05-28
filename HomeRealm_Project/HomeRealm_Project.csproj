@@ -224,6 +224,8 @@
     <Content Include="images\logo-black.svg" />
     <Content Include="images\logo-white.svg" />
     <Content Include="images\pexels-pixabay-258154.jpg" />
+    <Content Include="images\ProfilePic\admin.jpg" />
+    <Content Include="images\ProfilePic\Default_picture.jpg" />
     <Content Include="images\Properties\Default_prop.png" />
     <Content Include="images\Searchs_002.png" />
     <Content Include="images\Starred.svg.png" />
@@ -400,7 +402,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="images\idPics\" />
-    <Folder Include="images\ProfilePic\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

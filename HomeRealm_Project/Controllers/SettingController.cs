@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HomeRealm_Project.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,21 @@ namespace HomeRealm_Project.Controllers
         // GET: Setting
         public ActionResult Index()
         {
+            User CurrentUser;
+            using (MydbContext db = new MydbContext()) {
+                CurrentUser = db.Users.Find(Session["iduser"]);
+                if (CurrentUser is null) {
+                    return Redirect("Home");
+                }
+            
+            }
+            return View(CurrentUser);
+        }
+        public ActionResult ChangeUser()
+        {
+
             return View();
         }
+
     }
 }
