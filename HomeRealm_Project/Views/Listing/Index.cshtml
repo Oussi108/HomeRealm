@@ -24,7 +24,7 @@
                         <div class="row p-2 bg-white border rounded">
                             <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="~/images/@property.ImageUrl"></div>
                             <div class="col-md-6 mt-1">
-                                <h5>Quant olap shirts</h5>
+                                <h5>@property.Title</h5>
                                 <div class="d-flex flex-row">
                                     <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
                                 </div>
@@ -37,7 +37,7 @@
                                     <h4 class="mr-1">$@property.Price</h4>
                                 </div>
                                 <h6 class="text-success">Capacity : @property.Capacity Person</h6>
-                                <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Rent Now</button></div>
+                                <div class="d-flex flex-column mt-4"><a href="/listing/Details/@property.Id"><button class="btn btn-primary btn-sm" type="button">Details</button></a><button class="btn btn-outline-primary btn-sm mt-2" type="button">Rent Now</button></div>
                             </div>
                         </div>
                     }

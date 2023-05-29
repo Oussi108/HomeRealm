@@ -1,4 +1,6 @@
-﻿
+﻿@using HomeRealm_Project.Models
+@model PropertyWithImagesModel
+
 @{
     ViewBag.Title = "Details";
 }
@@ -9,7 +11,7 @@
         <div class="house-details">
             <div class="house-images">
                 <div class="main-image">
-                    <img src="~/images/e71693b8-d054-4ca1-ae6b-87fd3d7085fe.jpg" alt="Main Image">
+                    <img src="~/images/Properties/@Model.Ourproperty.ImageUrl" alt="Main Image">
                 </div>
                 <div class="additional-images">
                     <img src="~/images/pexels-pixabay-258154.jpg" alt="Additional Image 1">
@@ -17,7 +19,7 @@
                     <img src="~/images/w991x660.jpg" alt="Additional Image 3">
                 </div>
             </div>
-            
+
             <div class="house-info">
                 <h2 class="house-title">Spacious House with a Beautiful View</h2>
                 <div class="house-rating">
@@ -28,10 +30,10 @@
                     <i class="far fa-star"></i>
                     <span class="rating-count">(10)</span>
                 </div>
-                <div class="house-price">$150 / night</div>
+                <div class="house-price">$@Model.Ourproperty.Price / night</div>
                 <div class="house-location">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span class="location-text">Los Angeles, California, United States</span>
+                    <span class="location-text">@Model.Ourproperty.Country, @Model.Ourproperty.City ,@Model.Ourproperty.Address</span>
                 </div>
                 <div class="house-features">
                     <div class="feature-item">
@@ -40,15 +42,15 @@
                     </div>
                     <div class="feature-item">
                         <i class="fas fa-bath"></i>
-                        <span class="feature-label">Baths:</span> 3
+                        <span class="feature-label">Baths:</span> 1
                     </div>
                     <div class="feature-item">
                         <i class="fas fa-users"></i>
-                        <span class="feature-label">Guests:</span> 8
+                        <span class="feature-label">Guests:</span> @Model.Ourproperty.Capacity
                     </div>
                 </div>
                 <div class="house-description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce venenatis nunc lectus, id cursus magna facilisis eu. Sed commodo, purus eget semper bibendum, sapien nibh hendrerit quam, in mattis justo ipsum vitae nisi. Nullam vel ex nisl. Vivamus malesuada auctor odio, sit amet tristique arcu tincidunt eget.</p>
+                    <p>@Model.Ourproperty.Description</p>
                 </div>
                 <div class="house-amenities">
                     <h3 class="amenities-title">Amenities</h3>
@@ -58,7 +60,9 @@
                     <li class="amenities-item"><i class="fas fa-snowflake"></i>Air Conditioning</li>
                     <li class="amenities-item"><i class="fas fa-utensils"></i>Fully Equipped Kitchen</li>
                     <li class="amenities-item"><i class="fas fa-shower"></i>Outdoor Shower</li>
+
                 </div>
+                <a href="/listing/book/@Model.Ourproperty.Id"><button class="btn btn-primary btn-sm" type="button">Book Now</button></a>
             </div>
         </div>
     </div>

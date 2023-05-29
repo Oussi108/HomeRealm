@@ -175,6 +175,7 @@
     <Compile Include="Models\MydbContext.cs" />
     <Compile Include="Models\Property.cs" />
     <Compile Include="Models\PropertyImage.cs" />
+    <Compile Include="Models\PropertyWithImages.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -198,6 +199,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\CSS\bookingStyle.css" />
     <Content Include="Content\CSS\CardsListing.css" />
     <Content Include="Content\CSS\Dashboard.css" />
     <Content Include="Content\CSS\Details_kh.css" />
@@ -213,6 +215,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="images\1407953244000-177513283 %281%29.png" />
     <Content Include="images\628596eb-5f33-4d74-b6c3-20aff808a745.jpg" />
+    <Content Include="images\background.jpg" />
+    <Content Include="images\backgroundBook.jpg" />
     <Content Include="images\Default_picture.jpg" />
     <Content Include="images\Default_prop.png" />
     <Content Include="images\e71693b8-d054-4ca1-ae6b-87fd3d7085fe.jpg" />
@@ -380,6 +384,7 @@
     <Content Include="Views\Shared\HostDashboard.cshtml" />
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Views\ListingMangment\Addphotos.cshtml" />
+    <Content Include="Views\Listing\book.cshtml" />
     <None Include="Views\Shared\searching.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
