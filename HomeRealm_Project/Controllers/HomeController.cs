@@ -43,5 +43,6 @@ namespace HomeRealm_Project.Controllers
             Session.Remove("iduser");
             return RedirectToAction("Index");
         }
+        
     }
 }
