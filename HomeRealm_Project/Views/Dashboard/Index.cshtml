@@ -1,8 +1,38 @@
-﻿
+﻿@using HomeRealm_Project.Models
+
+@model HostListModel
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/HeaderDashboard.cshtml";
 }
 
-<h2>Index</h2>
+<table class="table">
+    
+    <caption style="caption-side:top"> Validate Users To become Hosts With ID</caption>
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Bio</th>
+            <th scope="col">State</th>
+            <th scope="col">Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ad in Model.Hosts)
+        {
+            <tr>
+                <th scope="row">@ad.HostId</th>
+                <td>@ad.User.FirstName @ad.User.LastName</td>
+                <td>@ad.User.Email</td>
+                <td>Not Valid</td>
+                <td><a href="@Url.Action("ViewIDpicture", "Dashboard", new { id = ad.HostId })">Details</a></td>
+
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+
 

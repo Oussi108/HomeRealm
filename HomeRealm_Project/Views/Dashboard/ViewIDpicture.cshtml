@@ -1,0 +1,54 @@
+﻿@using HomeRealm_Project.Models
+
+@model HostModel
+
+@{
+    ViewBag.Title = "ViewIDpicture";
+    Layout = "~/Views/Shared/HeaderDashboard.cshtml";
+}
+
+<div class="container">
+    <div class="image-container">
+
+        <img src="~/images/ProfilePic/admin.jpg" alt="Image">
+        <table class="table">
+            <caption style="caption-side:top">Users Information</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">ID</th>
+                    <td>@Model.Host.User.Id</td>
+                </tr>
+                <tr>
+                    <th scope="row">Name</th>
+                    <td>@Model.Host.User.FirstName @Model.Host.User.LastName</td>
+                </tr>
+                <tr>
+                    <th scope="row">Email</th>
+                    <td>@Model.Host.User.Email</td>
+                </tr>
+                <tr>
+                    <th scope="row">Bio</th>
+                    <td>@Model.Host.Bio</td>
+                </tr>
+                <tr>
+                    <th scope="row">Location</th>
+                    <td>@Model.Host.Country</td>
+                </tr>
+                <tr>
+                    <th scope="row">Age</th>
+                    <td>@(DateTime.Now.Year - Model.Host.Birthday.Year)</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="reason-container">
+            <label for="reason" class="form-label">Reason for Decision:</label>
+            <textarea class="form-control" id="reason" rows="4" placeholder="Enter reason"></textarea>
+        </div>
+
+        <div class="button-container">
+            <button class="btn btn-success" style="margin:5px;">Accept</button>
+            <button class="btn btn-danger" style="margin:5px;">Reject</button>
+        </div>
+    </div>
+</div>
+

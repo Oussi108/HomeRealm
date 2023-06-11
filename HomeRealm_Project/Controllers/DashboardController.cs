@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HomeRealm_Project.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,17 @@ namespace HomeRealm_Project.Controllers
         // GET: Dashboard
         public ActionResult Index()
         {
-            return View();
+            MydbContext db = new MydbContext();
+            var hosts = db.Hosts.Where(host => host.Verified == false).ToList();
+            HostListModel pd = new HostListModel() { Hosts = hosts };
+            return View(pd);
+        }
+        public ActionResult ViewIDpicture(int id)
+        {
+            MydbContext db = new MydbContext();
+            var host1 = db.Hosts.Find(id);
+            
+            return View(new HostModel() { Host = host1});
         }
     }
 }

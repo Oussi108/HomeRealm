@@ -126,5 +126,16 @@ namespace HomeRealm_Project.Controllers
                 dbContext.SaveChanges();
             }
         }
+        public ActionResult ViewBooks()
+        {
+            BookingHostModel bk = null;
+            if (!(Session["iduser"] is null))
+            {
+                 bk = new BookingHostModel(int.Parse(Session["iduser"].ToString()));
+            }
+            return View(bk);
+
+        }
+    
     }
 }

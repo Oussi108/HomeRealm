@@ -1,0 +1,39 @@
+﻿@using HomeRealm_Project.Models
+@model BookingHostModel
+@{
+    ViewBag.Title = "ViewBooks";
+    Layout = "~/Views/Shared/HostDashboard.cshtml";
+}
+@if (Session["iduser"] is null) { }
+    @Url.Action("index");}
+<table class="table">
+    <caption>List of users</caption>
+    <thead>
+        <tr>
+            <th scope="col">User ID</th>
+            <th scope="col">Property ID</th>
+            <th scope="col">Property Title</th>
+            <th scope="col">User Name</th>
+            <th scope="col">User Email</th>
+            <th scope="col">Check-In Date</th>
+            <th scope="col">Check-Out Date</th>
+            <th scope="col">Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var a in Model.MyRequests)
+        {
+        <tr>
+            <th scope="row">@a.UserId</th>
+            <td>@a.Property.Id</td>
+            <td>@a.Property.Title</td>
+            <td>@a.User.FirstName @a.User.LastName</td>
+            <td>@a.User.Email</td>
+            <td>@a.CheckInDate</td>
+            <td>@a.CheckOutDate</td>
+            <td>@a.Property.Country , @a.Property.City</td>
+
+        </tr>
+        }
+</table>
+
