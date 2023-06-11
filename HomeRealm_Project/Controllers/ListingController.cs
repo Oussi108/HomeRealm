@@ -61,11 +61,15 @@ namespace HomeRealm_Project.Controllers
         }
         public void AddBooking(int propertyId, int userId, DateTime checkInDate, DateTime checkOutDate)
         {
-            // Create a new instance of the Booking class
-            var newBooking = new Booking
+            using (var context = new MydbContext()) // Replace "YourDbContext" with your actual DbContext class
             {
-                PropertyId = propertyId,
-                UserId = userId,
+                // Create a new instance of the Booking class
+                var newBooking = new Booking
+                {
+                    PropertyId = propertyId,
+                    UserId = userId,
+                    User = context.Users.SingleOrDefault(d => d.Id == userId),
+                    Property = context.Properties.SingleOrDefault(db => db.Id == propertyId),
                 CheckInDate = checkInDate,
                 CheckOutDate = checkOutDate
                 // Set other properties as needed
@@ -73,8 +77,7 @@ namespace HomeRealm_Project.Controllers
 
             // Add the new booking to the appropriate data context or repository
             // and save changes to the database
-            using (var context = new MydbContext()) // Replace "YourDbContext" with your actual DbContext class
-            {
+            
                 context.Bookings.Add(newBooking);
                 context.SaveChanges();
             }

@@ -4,8 +4,7 @@
     ViewBag.Title = "ViewBooks";
     Layout = "~/Views/Shared/HostDashboard.cshtml";
 }
-@if (Session["iduser"] is null) { }
-    @Url.Action("index");}
+
 <table class="table">
     <caption>List of users</caption>
     <thead>
@@ -21,19 +20,27 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var a in Model.MyRequests)
+        @if (Model is null)
         {
-        <tr>
-            <th scope="row">@a.UserId</th>
-            <td>@a.Property.Id</td>
-            <td>@a.Property.Title</td>
-            <td>@a.User.FirstName @a.User.LastName</td>
-            <td>@a.User.Email</td>
-            <td>@a.CheckInDate</td>
-            <td>@a.CheckOutDate</td>
-            <td>@a.Property.Country , @a.Property.City</td>
-
-        </tr>
+            <tr>
+                <td colspan="8">No data available</td>
+            </tr>
+        }
+        else
+        {
+            foreach (var a in Model.MyRequests)
+            {
+                <tr>
+                    <td>@a.UserId</td>
+                    <td>@a.Property.Id</td>
+                    <td>@a.Property.Title</td>
+                    <td>@a.User.FirstName @a.User.LastName</td>
+                    <td>@a.User.Email</td>
+                    <td>@a.CheckInDate</td>
+                    <td>@a.CheckOutDate</td>
+                    <td>@a.Property.Country, @a.Property.City</td>
+                </tr>
+            }
         }
 </table>
 

@@ -41,6 +41,10 @@ namespace HomeRealm_Project.Controllers
         public ActionResult DeleteSession()
         {
             Session.Remove("iduser");
+            Session.Remove("rule");
+            Session.Remove("usermail");
+            
+
             return RedirectToAction("Index");
         }
         

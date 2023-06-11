@@ -60,6 +60,7 @@
 
 
         <ul class="main-nav">
+            <li class="help"><a href="@Url.Action("index", "Listing")">Offers</a></li>
             @if (Session["rule"] == "user")
             {
                 <li> <a href="@Url.Action("UpgradeToHost", "SignUp")"><button>Become a Host</button> </a></li>
@@ -86,7 +87,7 @@
 
             }
             else
-            {
+            {   
                 <li class="help">Help</li>
                 <li><a href="@Url.Action("Index", "SignUp")">Sign Up</a></li>
                 <li><a href="@Url.Action("Index", "Login")">Login</a></li>

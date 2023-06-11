@@ -136,6 +136,97 @@ namespace HomeRealm_Project.Controllers
             return View(bk);
 
         }
-    
+        public ActionResult ViewProperties()
+        {
+            PropertiesViewModel bk = null;
+            if (!(Session["iduser"] is null))
+            {
+                int id = int.Parse(Session["iduser"].ToString());
+                MydbContext db = new MydbContext();
+                bk = new PropertiesViewModel() { Properties = db.Properties.Where(a => a.Host.User.Id == id).ToList() };
+            }
+            return View(bk);
+
+        }
+        [HttpPost]
+        public ActionResult DeleteProperty(int id)
+        {
+            using (var db = new MydbContext())
+            {
+                // Find the property by ID
+                var property = db.Properties.Find(id);
+
+                if (property == null)
+                {
+                    // Property not found, handle the error or display a message
+                    return RedirectToAction("index");
+                }
+
+                // Remove the property from the context and mark it for deletion
+                db.Properties.Remove(property);
+                db.SaveChanges();
+            }
+
+            // Redirect the user to the property list page or any other appropriate page
+            return RedirectToAction("ViewProperties");
+        }
+
+        [HttpPost]
+        
+        public ActionResult EditPropertysub(FormCollection form)
+        {
+            MydbContext _dbContext = new MydbContext();
+            // Retrieve the property ID from the form collection
+            int propertyId = int.Parse(form["Id"]);
+
+            // Retrieve the property by its ID
+            var property = _dbContext.Properties.Find(propertyId);
+            if (ModelState.IsValid)
+            {
+               
+
+                if (property == null)
+                {
+                    // Property not found
+                    return RedirectToAction("ViewProperties");
+                }
+
+                // Update the property with the new values from the form collection
+                property.Title = form["Title"];
+                property.Description = form["Description"];
+                property.Address = form["Address"];
+                property.City = form["City"];
+                property.Country = form["Country"];
+                property.Price = double.Parse(form["Price"]);
+                property.Capacity = int.Parse(form["Capacity"]);
+                property.IsAvailable = form["IsAvailable"] == "on";
+                property.UpdatedAt = DateTime.Now;
+
+                // Save the changes to the database
+                _dbContext.SaveChanges();
+
+                return RedirectToAction("ViewProperties");
+            }
+
+            return View("EditProperty", property);
+        }
+
+
+        public ActionResult EditProperty(int id)
+        {
+            MydbContext db = new MydbContext();
+            // Retrieve the property from the database
+            var property = db.Properties.Find(id);
+            if (property == null)
+            {
+                // Property not found, handle accordingly (e.g., redirect to an error page)
+                return RedirectToAction("ViewProperties", "ListingMangment");
+            }
+
+            // Pass the property to the view
+            var model = property;
+
+            return View(model);
+        }
     }
 }

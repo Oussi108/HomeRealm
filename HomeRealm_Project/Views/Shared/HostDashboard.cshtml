@@ -19,6 +19,10 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <body class="home">
+    @if (Session["iduser"] is null) {
+        Response.Redirect(@Url.Action("index", "Home"), true);
+
+    }
     <div class="container-fluid display-table">
         <div class="row display-table-row">
             <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
@@ -31,8 +35,8 @@
                 <div class="navi">
                     <ul>
                         <li class="@((Request.Path == "/ListingMangment") ? "active" : "")"><a href="@Url.Action("Index", "ListingMangment")"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Home</span></a></li>
-                        <li class="@((Request.Path == "/ListingMangment/Properties") ? "active" : "")"><a href="@Url.Action("Index", "ListingMangment")"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Properties</span></a></li>
-                        <li class="@((Request.Path == "/ListingMangment/Bookings") ? "active" : "")"><a href="@Url.Action("Index", "ListingMangment")"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Bookings</span></a></li>
+                        <li class="@((Request.Path == "/ListingMangment/Properties") ? "active" : "")"><a href="@Url.Action("viewProperties", "ListingMangment")"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Properties</span></a></li>
+                        <li class="@((Request.Path == "/ListingMangment/Bookings") ? "active" : "")"><a href="@Url.Action("ViewBooks", "ListingMangment")"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Bookings</span></a></li>
                         <li class="@((Request.Path == "/ListingMangment/Statistics") ? "active" : "")"><a href="@Url.Action("Index", "ListingMangment")"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Statistics</span></a></li>
                         <li class="@((Request.Path == "/ListingMangment/Reviews") ? "active" : "")"><a href="@Url.Action("Index", "ListingMangment")"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Reviews</span></a></li>
 
@@ -121,7 +125,7 @@
 
         </div>
     </div>
-    
+
     <script>
         $(document).ready(function () {
             $('[data-toggle="offcanvas"]').click(function () {

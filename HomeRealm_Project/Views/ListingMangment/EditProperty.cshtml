@@ -1,0 +1,50 @@
+﻿@using HomeRealm_Project.Models
+@model Property
+@{
+    ViewBag.Title = "EditProperty";
+    Layout = "~/Views/Shared/HostDashboard.cshtml";
+}
+
+<form action="@Url.Action("EditPropertysub", "ListingMangment")" method="post">
+    @Html.AntiForgeryToken()
+
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="Title" class="form-control" value="@Model.Title" required>
+    </div>
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" name="Description" class="form-control" required>@Model.Description</textarea>
+    </div>
+    <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="Address" class="form-control" value="@Model.Address" required>
+    </div>
+    <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="city" name="City" class="form-control" value="@Model.City" required>
+    </div>
+    <div class="form-group">
+        <label for="country">Country</label>
+        <input type="text" id="country" name="Country" class="form-control" value="@Model.Country" required>
+    </div>
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" id="price" name="Price" class="form-control" value="@Model.Price" required>
+    </div>
+    <div class="form-group">
+        <label for="capacity">Capacity</label>
+        <input type="number" id="capacity" name="Capacity" class="form-control" value="@Model.Capacity" required>
+    </div>
+    <div class="form-group">
+        <label for="isAvailable">Is Available</label>
+        <input type="checkbox" id="isAvailable" name="IsAvailable" class="form-control" @(Model.IsAvailable ? "checked" : "")>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+
+

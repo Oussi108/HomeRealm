@@ -220,6 +220,7 @@
     <Content Include="images\background.jpg" />
     <Content Include="images\backgroundBook.jpg" />
     <Content Include="images\Default_picture.jpg" />
+    <Content Include="images\Default_prop1.png" />
     <Content Include="images\Default_prop.png" />
     <Content Include="images\e71693b8-d054-4ca1-ae6b-87fd3d7085fe.jpg" />
     <Content Include="images\heart.svg" />
@@ -233,6 +234,7 @@
     <Content Include="images\ProfilePic\admin.jpg" />
     <Content Include="images\ProfilePic\Default_picture.jpg" />
     <Content Include="images\Properties\Default_prop.png" />
+    <Content Include="images\Properties\Default_prop1.png" />
     <Content Include="images\Searchs_002.png" />
     <Content Include="images\Starred.svg.png" />
     <Content Include="images\TAL-hidden-haven-villa-south-africa-airbnb-NEWBNBCAT0123-0e3c6ef5dce0490aac7dd5cd92b27f33.jpg" />
@@ -389,6 +391,8 @@
     <Content Include="Views\Listing\book.cshtml" />
     <Content Include="Views\Dashboard\ViewIDpicture.cshtml" />
     <Content Include="Views\ListingMangment\ViewBooks.cshtml" />
+    <Content Include="Views\ListingMangment\ViewProperties.cshtml" />
+    <Content Include="Views\ListingMangment\EditProperty.cshtml" />
     <None Include="Views\Shared\searching.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
