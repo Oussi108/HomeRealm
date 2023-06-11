@@ -37,6 +37,13 @@ namespace HomeRealm_Project.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+
+        }
+        public ActionResult Help()
+        {
+            ViewBag.Message = "Your Help page.";
+
+            return View();
         }
         public ActionResult DeleteSession()
         {

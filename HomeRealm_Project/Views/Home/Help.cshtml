@@ -1,0 +1,80 @@
+﻿<html>
+<head>
+   <style>       main {
+           padding: 20px;
+       }
+
+       section {
+           margin-bottom: 20px;
+       }
+
+       h2 {
+           margin-bottom: 10px;
+       }
+
+       ul {
+           list-style-type: disc;
+           margin-left: 20px;
+       }
+
+       a {
+           color: #007bff;
+       }
+
+       footer {
+           background-color: #333;
+           color: #fff;
+           padding: 10px;
+           text-align: center;
+       }
+
+       /* Specific styles for the help section */
+       .help-section {
+           max-width: 800px;
+           margin: 0 auto;
+       }
+
+           .help-section p {
+               margin-bottom: 10px;
+           }
+
+           .help-section h3 {
+               margin-top: 20px;
+           }
+
+           .help-section ul li {
+               margin-bottom: 5px;
+           } </style>
+</head>
+<body>
+    <main>
+        <section class="help-section">
+            <h2>How Can We Help You?</h2>
+            <p>Welcome to the Home Realm Help Center. We're here to assist you with any questions or issues you may encounter while using our website.</p>
+            <p>If you need assistance with any of the following, please click on the corresponding link:</p>
+            <ul>
+                <li><a href="#signup">Creating an Account (Sign Up)</a></li>
+                <li><a href="#booking">Booking Accommodations</a></li>
+                <li><a href="#payments">Managing Payments</a></li>
+                <li><a href="#cancellation">Cancelling a Reservation</a></li>
+                <li><a href="#contact">Contacting Support</a></li>
+            </ul>
+
+            <h3 id="signup">Creating an Account (Sign Up)</h3>
+            <p>If you're new to Home Realm, you can easily create an account by visiting our <a href="@Url.Action("Index", "SignUp")">sign up </a>page. Fill in the required information, such as your full name, email, and password, and click the "Sign Up" button to complete the process. Once registered, you'll have access to all the features and benefits Home Realm offers.</p>
+
+            <h3 id="booking">Booking Accommodations</h3>
+            <p>To book accommodations on Home Realm, use our search functionality to find your desired destination. You can filter the results by location, dates, price range, and other preferences. Once you've selected a listing, review the details, including property amenities, photos, and reviews from other users. Choose your check-in and check-out dates, and click the "Book Now" button. Follow the prompts to review and confirm your booking. Upon successful completion, you'll receive a booking confirmation email with all the necessary details.</p>
+
+            <h3 id="payments">Managing Payments</h3>
+            <p>Home Realm offers secure payment options for your convenience. During the booking process, you'll be prompted to enter your payment details. We accept various payment methods, including credit/debit cards and online payment platforms. Rest assured that your payment information is protected using industry-standard encryption. If you need to view or manage your payment details, you can do so in your account settings under the "Payment Methods" section.</p>
+
+            <h3 id="cancellation">Cancelling a Reservation</h3>
+            <p>If you need to cancel a reservation, please visit the "Reservations" section of your account dashboard. Locate the reservation you wish to cancel and follow the provided instructions. It's important to review the cancellation policy associated with the property you booked, as it may affect any refund you are eligible for. If you have any specific questions or concerns regarding cancellations, feel free to contact our support team for assistance.</p>
+
+            <h3 id="contact">Contacting Support</h3>
+            <p>If you have any further questions or require assistance not covered in our Help Center, please don't hesitate to reach out to our support team. You can contact us by visiting our <a href="contact.html">Contact</a> page and filling out the form with your details and message. We'll respond to your inquiry as soon as possible. Alternatively, you can reach us directly via email or phone, as provided on the Contact page.</p>
+        </section>
+    </main>
+</body>
+</html>
