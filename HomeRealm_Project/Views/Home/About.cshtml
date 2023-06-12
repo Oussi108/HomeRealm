@@ -1,7 +1,54 @@
-﻿@{
-    ViewBag.Title = "About";
+﻿﻿
+@{
+    ViewBag.Title = "Help";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+
+
+    <main>
+        <section class="about-section">
+            <h2>About Us</h2>
+            <p>Welcome to Home Realm! We are a passionate team of talented software engineering students determined to revolutionize the way you explore and book accommodations for your travels.</p>
+            <p>At Home Realm, our vision is to create a platform that seamlessly connects travelers with their ideal accommodations, providing a hassle-free and memorable experience. We understand that finding the perfect place to stay can greatly enhance your travel experience, and that's why we're dedicated to delivering a comprehensive and user-friendly solution.</p>
+            <p>Let us introduce Youness Kherbache, a remarkable 22-year-old software engineering student. With his exceptional skills in web development, he brings your visions to life with meticulous attention to detail. Youness is renowned for his ability to craft visually stunning user interfaces that not only captivate but also enhance the overall user experience. His dedication and creativity make him an invaluable asset to our team.</p>
+            <p>Now, let's talk about Oussi El Houssin, an extraordinary 24-year-old software engineering student. Oussi is a true mastermind in database management and system architecture. With his profound expertise, he ensures that Home Realm delivers a reliable and scalable platform. Oussi's analytical thinking and boundless creativity merge seamlessly to create an exceptional user experience for our valued travelers and property owners.</p>
+            <p>Together, Youness and Oussi form a dynamic duo committed to crafting a seamless and unforgettable journey for all users of Home Realm. By combining their expertise, skills, and unwavering passion for technology, they create an innovative and user-friendly platform that revolutionizes the way you explore and book accommodations.</p>
+            <p>At Home Realm, we believe in providing personalized attention and exeptional customer service. Our dedicated support team is available around the clock to assist you with any inquiries or issues you may encounter. We strive to exceed your expectations and ensure that your experience with Home Realm is nothing short of extraordinary.</p>
+            <p>Join us on this extraordinary adventure as we continue to expand and enhance Home Realm. We invite you to explore our vast selection of properties, read reviews from fellow travelers, and embark on unforgettable journeys. Let Home Realm be your trusted companion in discovering new destinations, creating lifelong memories, and forging connections with people and places around the world.</p>
+            <p>Thank you for choosing Home Realm, and we look forward to being a part of your incredible travel story!</p>
+        </section>
+    </main>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .about-section {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+            .about-section h2 {
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+
+            .about-section p {
+                font-size: 18px;
+                line-height: 1.5;
+                margin-bottom: 20px;
+            }
+
+                .about-section p:last-child {
+                    margin-bottom: 0;
+                }
+    </style>
+

@@ -7,9 +7,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>Home realm (@ViewBag.Title)</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link rel="icon" type="images/x-icon" href="~/images/homerealm.png" />
 
 
 
@@ -88,7 +89,7 @@
             }
             else
             {   
-                <li class="help">Help</li>
+        <li><a href="@Url.Action("Help", "Home")">Help</a></li>
                 <li><a href="@Url.Action("Index", "SignUp")">Sign Up</a></li>
                 <li><a href="@Url.Action("Index", "Login")">Login</a></li>
             }

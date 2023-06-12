@@ -397,6 +397,7 @@
     <Content Include="Views\ListingMangment\ViewBooks.cshtml" />
     <Content Include="Views\ListingMangment\ViewProperties.cshtml" />
     <Content Include="Views\ListingMangment\EditProperty.cshtml" />
+    <Content Include="Views\Home\Help.cshtml" />
     <None Include="Views\Shared\searching.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

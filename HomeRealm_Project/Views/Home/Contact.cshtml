@@ -1,17 +1,107 @@
-﻿@{
-    ViewBag.Title = "Contact";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿﻿
+<
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<main>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Thank you for your interest in Home Realm. If you have any questions, feedback, or inquiries, please don't hesitate to reach out to us.</p>
+
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+</main>
+<style>
+    /* General Styles */
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    /* Contact Section */
+
+    .contact-section {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+        .contact-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .contact-section p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .contact-section form {
+            margin-top: 20px;
+        }
+
+        .contact-section label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .contact-section input,
+        .contact-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+            .contact-section input[type="text"],
+            .contact-section input[type="email"],
+            .contact-section textarea {
+                background-color: #fff;
+                color: #555;
+            }
+
+            .contact-section input[type="submit"] {
+                background-color: #333;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+                .contact-section input[type="submit"]:hover {
+                    background-color: #555;
+                }
+
+                .contact-section input[type="submit"]:focus {
+                    outline: none;
+                }
+
+                .contact-section input[type="submit"]:active {
+                    background-color: #222;
+                }
+</style>
+

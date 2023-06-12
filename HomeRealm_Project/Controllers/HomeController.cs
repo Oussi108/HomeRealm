@@ -38,6 +38,13 @@ namespace HomeRealm_Project.Controllers
 
             return View();
         }
+        public ActionResult Help()
+        {
+            ViewBag.Message = "Your Help page.";
+
+            return View();
+        }
+
         public ActionResult DeleteSession()
         {
             Session.Remove("iduser");

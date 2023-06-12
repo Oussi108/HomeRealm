@@ -1,11 +1,9 @@
-﻿/*-----------
+﻿﻿ /*-----------
 -----All-----
 -----------*/
-
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 
@@ -18,14 +16,15 @@ header {
     top: 0;
     width: 100%;
     height: 62px;
-    font-family: Circular,Helvetica,Arial,sans-serif;
+    font-family: Circular, Helvetica, Arial, sans-serif;
     color: #484848;
     background-color: #fff;
-    border: 1px solid #DCE0E0;
+    border: 1px solid #dce0e0;
     border-top: none;
     border-right: none;
     border-left: none;
 }
+
 
 
 
@@ -147,7 +146,7 @@ header {
     margin: 130px auto;
     width: 90%;
     height: 90%;
-   text-align:left !important;
+    text-align: left !important;
     font-family: Circular,Helvetica,Arial,sans-serif;
 }
 
@@ -167,34 +166,36 @@ header {
 
 /*---search-row---*/
 
+/*---search-row---*/
+
 .search-input {
-    padding: 10px;
+    padding: 12px; /* Updated padding to 12px */
     float: left;
-    width: 330px;
-    height: 42px;
-    border: 1px solid #757575;
+    width: 380px; /* Updated width to 380px */
+    height: 52px; /* Updated height to 52px */
+    border: 2px solid #4CAF50; /* Updated border to 2px solid green (#4CAF50) */
     border-right-color: transparent;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    font-size: 16px;
+    border-top-left-radius: 5px; /* Updated border-top-left-radius to 5px */
+    border-bottom-left-radius: 5px; /* Updated border-bottom-left-radius to 5px */
+    font-size: 18px; /* Updated font-size to 18px */
 }
 
 .checks-input {
     float: left;
-    width: 55%;
-    height: 42px;
-    padding-inline:25px;
-    border: 1px solid #757575;
+    width: 60%; /* Updated width to 60% */
+    height: 52px; /* Updated height to 52px */
+    padding-inline: 30px; /* Updated padding-inline to 30px */
+    border: 2px solid #4CAF50; /* Updated border to 2px solid green (#4CAF50) */
     border-right-color: transparent;
 }
 
 .check-in {
-    padding: 2px;
+    padding: 4px; /* Updated padding to 4px */
     margin: 5px;
     float: left;
-    width: 100px;
-    height: 30px;
-    style ="height: 40px; border-color: transparent;
+    width: 130px; /* Updated width to 130px */
+    height: 38px; /* Updated height to 38px */
+    border-color: transparent;
     font-size: 16px;
 }
 
@@ -209,12 +210,12 @@ header {
     }
 
 .check-out {
-    padding: 2px;
+    padding: 4px; /* Updated padding to 4px */
     float: right;
     margin-top: 5px;
-    margin-right: 70px;
-    width: 110px;
-    height: 30px;
+    margin-right: 40px; /* Updated margin-right to 40px */
+    width: 140px; /* Updated width to 140px */
+    height: 38px; /* Updated height to 38px */
     border-color: transparent;
     font-size: 16px;
 }
@@ -232,38 +233,39 @@ header {
 .right-arrow {
     fill: currentColor;
     color: #757575;
-    margin-top: 7px;
+    margin-top: 9px; /* Updated margin-top to 9px */
 }
 
 .guests {
     float: left;
-    width: 130px;
-    height: 42px;
-    border: 1px solid #757575;
+    width: 160px; /* Updated width to 160px */
+    height: 52px; /* Updated height to 52px */
+    border: 2px solid #4CAF50; /* Updated border to 2px solid green (#4CAF50) */
     border-right-color: transparent;
     background-color: #fff;
     font-size: 16px;
-    padding: 10px;
+    padding: 12px; /* Updated padding to 12px */
 }
 
 .search-btn {
     float: left;
-    width: 150px;
-    height: 42px;
-    border: 1px solid black;
+    width: 180px; /* Updated width to 180px */
+    height: 52px; /* Updated height to 52px */
+    border: 2px solid black;
     margin: 0 0 3px 0;
     background-color: black;
     color: #fff;
     font-weight: bold;
-    font-size: 14px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+    font-size: 16px; /* Updated font-size to 16px */
+    border-top-right-radius: 5px; /* Updated border-top-right-radius to 5px */
+    border-bottom-right-radius: 5px; /* Updated border-bottom-right-radius to 5px */
 }
 
     .search-btn:hover {
         background-color: #FF7E82;
         cursor: pointer;
     }
+
 
 /*---gallery-prices---*/
 
@@ -274,15 +276,15 @@ header {
 }
 
     .prices h3 {
-        font-weight: 100;
-        font-size: 25px;
-        color: #484848;
-        margin-left: 5px;
+        font-weight: 400; /* Updated font-weight to 400 */
+        font-size: 30px; /* Updated font-size to 30px */
+        color: #2E2E2E; /* Updated color to #2E2E2E */
+        margin-left: 10px; /* Updated margin-left to 10px */
     }
 
 .img {
     display: inline-block;
-    margin: 30px 5px 0 5px;
+    margin: 30px 10px 0 10px; /* Updated margin to 30px 10px 0 10px */
 }
 
     .img:last-child {
@@ -295,17 +297,17 @@ header {
     }
 
 .price-stamp {
-    margin: -200px 0 0 12px;
+    margin: -180px 0 0 20px; /* Updated margin to -180px 0 0 20px */
     color: #fff;
-    font-weight: 900;
-    font-size: 22px;
+    font-weight: 700; /* Updated font-weight to 700 */
+    font-size: 26px; /* Updated font-size to 26px */
     text-shadow: 0 0 6px #615e61;
 }
 
 .description {
     margin: 180px 0 0 0;
-    font-size: 14px;
-    color: #484848;
+    font-size: 16px; /* Updated font-size to 16px */
+    color: #2E2E2E; /* Updated color to #2E2E2E */
 }
 
 /*---line---*/
@@ -320,10 +322,10 @@ hr {
 /*---gallery-places---*/
 
 .gallery-places h3 {
-    font-weight: 100;
-    font-size: 25px;
-    color: #484848;
-    margin: 0 0 35px 5px;
+    font-weight: 400; /* Updated font-weight to 400 */
+    font-size: 30px; /* Updated font-size to 30px */
+    color: #2E2E2E; /* Updated color to #2E2E2E */
+    margin: 0 0 25px 10px; /* Updated margin to 0 0 25px 10px */
 }
 
 .places {
@@ -365,13 +367,10 @@ hr {
     }
 
 .place-names {
-    margin: -30px 0 0 20px;
+    margin: -20px 0 0 30px; /* Updated margin to -20px 0 0 30px */
     color: #fff;
-    font-size: 18px;
+    font-size: 20px; /* Updated font-size to 20px */
 }
-
-
-
 
 /*---gallery-guidebooks---*/
 
@@ -380,17 +379,17 @@ hr {
 }
 
     .guidebooks h3 {
-        font-weight: 100;
-        font-size: 25px;
-        color: #484848;
-        margin-left: 5px;
+        font-weight: 400; /* Updated font-weight to 400 */
+        font-size: 30px; /* Updated font-size to 30px */
+        color: #2E2E2E; /* Updated color to #2E2E2E */
+        margin-left: 10px; /* Updated margin-left to 10px */
     }
 
 .img-box {
     float: left;
     width: 305px;
     height: 205px;
-    margin: 40px 5px 0 5px;
+    margin: 40px 10px 0 10px; /* Updated margin to 40px 10px 0 10px */
 }
 
     .img-box:last-child {
@@ -398,8 +397,8 @@ hr {
     }
 
     .img-box h4 {
-        font-size: 14px;
-        color: #484848;
+        font-size: 16px; /* Updated font-size to 16px */
+        color: #2E2E2E; /* Updated color to #2E2E2E */
         float: left;
         margin: 5px 5px 0 0;
     }
@@ -409,15 +408,15 @@ hr {
         }
 
     .img-box p {
-        font-size: 14px;
-        color: #484848;
+        font-size: 16px; /* Updated font-size to 16px */
+        color: #2E2E2E; /* Updated color to #2E2E2E */
         margin-top: 5px;
         float: left;
     }
 
 .img-big {
     float: left;
-    margin-top: 3px;
+    margin-top: 5px; /* Updated margin-top to 5px */
     width: 200px;
     height: 163px;
 }
@@ -426,9 +425,8 @@ hr {
     float: right;
     width: 100px;
     height: 80px;
-    margin-top: 3px;
+    margin-top: 5px; /* Updated margin-top to 5px */
 }
-
 
 
 /*----------------
@@ -557,4 +555,3 @@ footer {
     font-size: 14px;
 }
 /* here for login session*/
-
