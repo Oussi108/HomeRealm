@@ -1,9 +1,9 @@
 ﻿@using HomeRealm_Project.Models
-@model User
+@model SettingModel
 @{
     ViewBag.Title = "Index";
 }
-<form method="post" action=@Url.Action("SubmitHostUpgrade", "Setting") enctype="multipart/form-data">
+<form method="post" action=@Url.Action("Submitchange", "Setting") enctype="multipart/form-data">
     <div class="container light-style flex-grow-1 container-p-y">
 
         <h4 class="font-weight-bold py-3 mb-4">
@@ -26,7 +26,7 @@
                         <div class="tab-pane fade active show" id="account-general">
 
                             <div class="card-body media align-items-center">
-                                <img src="~/images/ProfilePic/@Model.Picture" alt="" class="d-block ui-w-80">
+                                <img src="~/images/ProfilePic/@Model.user.Picture" alt="" class="d-block ui-w-80">
                                 <div class="media-body ml-4">
                                     <label class="btn btn-outline-primary">
                                         Upload new photo
@@ -42,15 +42,15 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label class="form-label">First Name</label>
-                                    <input type="text" class="form-control mb-1" name="Firstname" value="@Model.FirstName">
+                                    <input type="text" class="form-control mb-1" name="Firstname" value="@Model.user.FirstName">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Family Name</label>
-                                    <input type="text" class="form-control" name="Lastname" value="@Model.LastName">
+                                    <input type="text" class="form-control" name="Lastname" value="@Model.user.LastName">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">E-mail</label>
-                                    <input type="text" class="form-control mb-1" value="nmaxwell@mail.com">
+                                    <input type="text" class="form-control mb-1" value="@Model.user.Email">
                                     <div class="alert alert-warning mt-3">
                                         Your email is not confirmed. Please check your inbox.<br>
                                         <a href="javascript:void(0)">Resend confirmation</a>
@@ -90,11 +90,11 @@
 
                                     <div class="form-group">
                                         <label class="form-label">Bio</label>
-                                        <textarea class="form-control" rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nunc arcu, dignissim sit amet sollicitudin iaculis, vehicula id urna. Sed luctus urna nunc. Donec fermentum, magna sit amet rutrum pretium, turpis dolor molestie diam, ut lacinia diam risus eleifend sapien. Curabitur ac nibh nulla. Maecenas nec augue placerat, viverra tellus non, pulvinar risus.</textarea>
+                                        <textarea class="form-control" rows="5">@Model.host.Bio</textarea>
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label">Birthday</label>
-                                        <input type="text" class="form-control" value="May 3, 1995">
+                                        <input type="text" class="form-control" value="@Model.host.Birthday">
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label">Country</label>
@@ -115,7 +115,7 @@
                                     <h6 class="mb-4">Contacts</h6>
                                     <div class="form-group">
                                         <label class="form-label">Phone</label>
-                                        <input type="text" class="form-control" value="+0 (123) 456 7891">
+                                        <input type="text" class="form-control" value="@Model.user.PhoneNumber">
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label">Website</label>
