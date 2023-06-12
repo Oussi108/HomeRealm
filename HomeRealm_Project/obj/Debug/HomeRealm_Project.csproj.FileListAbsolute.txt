@@ -96,3 +96,4 @@ C:\Users\acer\source\repos\HomeRealm_Project\HomeRealm_Project\bin\Microsoft.Cod
 C:\Users\acer\source\repos\HomeRealm_Project\HomeRealm_Project\obj\Debug\HomeRealm_Project.csproj.CopyComplete
 C:\Users\acer\source\repos\HomeRealm_Project\HomeRealm_Project\obj\Debug\HomeRealm_Project.dll
 C:\Users\acer\source\repos\HomeRealm_Project\HomeRealm_Project\obj\Debug\HomeRealm_Project.pdb
+C:\Users\acer\source\repos\HomeRealm_Project\HomeRealm_Project\obj\Debug\HomeRealm_Project.csproj.AssemblyReference.cache

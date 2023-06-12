@@ -167,6 +167,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AdminData.cs" />
+    <Compile Include="Models\AdminService.cs" />
+    <Compile Include="Models\AdminUser.cs" />
     <Compile Include="Models\Booking.cs" />
     <Compile Include="Models\BookingHostModel.cs" />
     <Compile Include="Models\HostListModel.cs" />
@@ -220,8 +223,8 @@
     <Content Include="images\background.jpg" />
     <Content Include="images\backgroundBook.jpg" />
     <Content Include="images\Default_picture.jpg" />
-    <Content Include="images\Default_prop1.png" />
     <Content Include="images\Default_prop.png" />
+    <Content Include="images\Default_prop12.png" />
     <Content Include="images\e71693b8-d054-4ca1-ae6b-87fd3d7085fe.jpg" />
     <Content Include="images\heart.svg" />
     <Content Include="images\homerealm-low-resolution-color-logo.png" />
@@ -276,6 +279,7 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Admins.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
