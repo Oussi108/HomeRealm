@@ -17,37 +17,55 @@ namespace HomeRealm_Project.Controllers
         }
         public ActionResult SubmitAddHouse(FormCollection FC)
         {
-            string path ="";
+            string path = "";
             HttpPostedFileBase file = Request.Files["Mainphoto"];
             if (file != null && file.ContentLength > 0)
             {
                 int id = (int)Session["iduser"];
                 // Do something with the uploaded file
-                string fileName = id + "_" + Path.GetFileName(file.FileName)+ "_Main";
-                 path = Path.Combine(Server.MapPath("~/images/Properties"), fileName);
+                string fileName = Path.GetFileName(file.FileName);
+                path = Path.Combine(Server.MapPath("~/images/Properties"), fileName);
                 file.SaveAs(path);
-                
-              
+
+
+
             }
-            
+            string title = FC["Title"];
+            string description = FC["Description"];
+            string address = FC["Address"];
+            string city = FC["City"];
+            string country = FC["Country"];
+            string fileName1 = Path.GetFileName(path);
+            string imageUrl = fileName1;
+            double price = double.Parse(FC["Price"]);
+            int capacity = int.Parse(FC["Capacity"]);
+            bool isAvailable = true;
+            DateTime createdAt = DateTime.Now;
+
+            int userId = int.Parse(Session["iduser"].ToString());
+            MydbContext db = new MydbContext();
+            Host h = db.Hosts.Where(x => x.User.Id == userId).FirstOrDefault();
+
             var newProperty = new Property
             {
-                Title = FC["Title"],
-                Description = FC["Description"],
-                Address = FC["Adress"],
-                City = FC["City"],
-                Country = FC["Country"],
-                ImageUrl = path,
-                Price = double.Parse(FC["Price"]),
-                Capacity = int.Parse(FC["Capacity"]) ,
-                IsAvailable = true,
-                CreatedAt = DateTime.Now,
-                HostId = (int)Session["userid"]
+                Title = title,
+                Description = description,
+                Address = address,
+                City = city,
+                Country = country,
+                ImageUrl = imageUrl,
+                Price = price,
+                Capacity = capacity,
+                IsAvailable = isAvailable,
+                CreatedAt = createdAt,
+                HostId = h.HostId
             };
 
             AddProperty(newProperty);
             return RedirectToAction("Index");
         }
+
+
         public ActionResult AddHouse()
         {
             

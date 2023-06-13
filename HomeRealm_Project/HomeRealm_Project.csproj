@@ -182,6 +182,7 @@
     <Compile Include="Models\PropertyImage.cs" />
     <Compile Include="Models\PropertyWithImages.cs" />
     <Compile Include="Models\Review.cs" />
+    <Compile Include="Models\SettingModel.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
