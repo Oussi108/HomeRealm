@@ -22,5 +22,5 @@ If you would like to contribute to this project, please submit a pull request. W
 ## Acknowledgments
 
 - This project was inspired by the Airbnb website and their user-friendly interface.
-- We used Bootstrap for the front-end design and layout.
+- We used Bootstrap and razor for the front-end design and layout.
 - We used the .NET MVC framework and MySQL for the back-end database management.
